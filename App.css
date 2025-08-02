@@ -1,0 +1,262 @@
+/* Reset + Base Styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+  height: 100%;
+  background: linear-gradient(135deg, #aaaaaae1, #5b548a) no-repeat;
+  overflow: auto;
+  color: #222;
+}
+
+/* App Container */
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 30px 20px;
+  transition: background 0.5s ease-in-out;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h3 {
+  margin: 10px 0 25px 0px;
+  font-style: italic;
+}
+
+/* Search Bar */
+.search {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+  width: 100%;
+}
+.search input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 16px;
+  background-color: #fff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.search input:focus {
+  border-color: #999;
+}
+.search button {
+  padding: 12px 18px;
+  background: #1e1e1e;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.search button:hover {
+  background: #333;
+}
+
+/* Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px);
+  border-radius: 22px;
+  padding: 30px;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 12px 45px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  color: black;
+  padding: 20px 0;
+}
+
+.details .col {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.details .col i {
+  font-size: 28px;
+}
+
+.details .col div {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.details .col p {
+  margin: 0;
+}
+
+.details .humidity,
+.details .wind {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* AQI Section */
+.aqi-section {
+  padding: 20px 0;
+  font-size: 1rem;
+}
+.aqi-title {
+  font-weight: bold;
+  margin-bottom: 6px;
+  font-size: 1.1rem;
+}
+.aqi-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+.aqi-badge {
+  padding: 6px 14px;
+  border-radius: 18px;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #000;
+}
+.aqi-info {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.aqi-description {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #000;
+  margin-top: 5px;
+}
+
+/* AQI Badges */
+.badge {
+  padding: 6px 12px;
+  border-radius: 14px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.badge.green {
+  background: #4caf50;
+  color: #fff;
+}
+.badge.lightblue {
+  background: #03a9f4;
+  color: #fff;
+}
+.badge.orange {
+  background: #ff9800;
+  color: #fff;
+}
+.badge.red {
+  background: #f44336;
+  color: #fff;
+}
+.badge.purple {
+  background: #9c27b0;
+  color: #fff;
+}
+
+/* Forecast Scroll */
+.forecast-scroll {
+  display: flex;
+  overflow-x: auto;
+  margin-top: 25px;
+  gap: 16px;
+  padding-bottom: 10px;
+}
+
+/* Forecast Card with background */
+.forecast-card {
+  min-width: 110px;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("https://source.unsplash.com/100x100/?weather,sky") center/cover;
+  border-radius: 16px;
+  padding: 14px;
+  text-align: center;
+  color: #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+}
+.forecast-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.forecast-card img {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 8px;
+}
+
+/* Weather Backgrounds */
+.sunny {
+  background: url("https://images.unsplash.com/photo-1501973801540-537f08ccae7b")
+    no-repeat center/cover;
+}
+
+.cloudy {
+  background: url("https://images.unsplash.com/photo-1501630834273-4b5604d2ee31")
+    no-repeat center/cover;
+}
+
+.rainy {
+  background: url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21")
+    no-repeat center/cover;
+}
+
+.snowy {
+  background: url("https://images.unsplash.com/photo-1608889175826-b2e401bba760")
+    no-repeat center/cover;
+}
+
+.stormy {
+  background: url("https://images.unsplash.com/photo-1500674425229-f692875b0ab7")
+    no-repeat center/cover;
+}
+
+.default {
+  background: url("https://images.unsplash.com/photo-1499346030926-9a72daac6c63")
+    no-repeat center/cover;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .glass-card {
+    padding: 20px;
+  }
+  .forecast-card {
+    min-width: 85px;
+    padding: 10px;
+  }
+  .search input,
+  .search button {
+    font-size: 14px;
+  }
+}
